@@ -28,11 +28,16 @@ This project heavily borrowed code from Google's [google/golang-runtime](https:/
 
 1. Create a Dockerfile in your golang application directory with the following content:
 
+```dockerfile
     FROM dockerfile/go-runtime
+```
 
 2. Build your container image by running the following command in your application directory:
 
+```dockerfile
     docker build -t app .
+```
+
 
 ### Assumptions
 
