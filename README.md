@@ -34,9 +34,17 @@ This project heavily borrowed code from Google's [google/golang-runtime](https:/
 
 2. Build your container image by running the following command in your application directory:
 
-```dockerfile
-    docker build -t app .
+```sh
+    docker build -t="app" .
 ```
+
+3. Run application by mapping port 8080:
+
+```sh
+    docker run -d -p 8080:8080 app
+```
+
+4. Open [http://localhost:8080](http://localhost:8080)
 
 
 ### Assumptions
