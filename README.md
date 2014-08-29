@@ -26,25 +26,26 @@ This project heavily borrowed code from Google's [google/golang-runtime](https:/
 
 ### Usage
 
-1. Create a Dockerfile in your golang application directory with the following content:
+* 1. Create a Dockerfile in your golang application directory with the following content:
 
 ```dockerfile
     FROM dockerfile/go-runtime
 ```
 
-2. Build your container image by running the following command in your application directory:
+* 2. Build your container image by running the following command in your application directory:
 
 ```sh
     docker build -t="app" .
 ```
 
-3. Run application by mapping port 8080:
+* 3. Run application by mapping port 8080:
 
 ```sh
     docker run -d -p 8080:8080 app
+    APP=$(docker run -d -p 8080 app)
+    PORT=$(docker port $APP 8080 | awk -F: '{ print $2 }')
+    echo "Open http://localhost:$PORT/"
 ```
-
-4. Open [http://localhost:8080](http://localhost:8080)
 
 
 ### Assumptions
