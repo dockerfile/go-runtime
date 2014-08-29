@@ -16,7 +16,7 @@ RUN chmod +x /usr/local/bin/go-*
 
 # Set instructions on build.
 ONBUILD ADD . /gopath/src/app/
-ONBUILD RUN go-build
+ONBUILD RUN /usr/local/bin/go-build
 
 # Define default command.
 CMD ["go-run"]
