@@ -49,7 +49,6 @@ When building your application docker image, `ONBUILD` triggers fetch non-vendor
 * **Step 3**: Run application by mapping port 8080:
 
 ```sh
-    docker run -d -p 8080 app
     APP=$(docker run -d -p 8080 app)
     PORT=$(docker port $APP 8080 | awk -F: '{print $2}')
     echo "Open http://localhost:$PORT/"
