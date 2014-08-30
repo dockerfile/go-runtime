@@ -10,7 +10,7 @@ It can automatically bundle a golang application with its dependencies and set t
 This project heavily borrowed code from Google's [google/golang-runtime](https://registry.hub.docker.com/u/google/golang-runtime/) Docker image.
 
 
-### Dependencies
+## Base Docker Image
 
 * [dockerfile/go](http://dockerfile.github.io/#/go)
 
